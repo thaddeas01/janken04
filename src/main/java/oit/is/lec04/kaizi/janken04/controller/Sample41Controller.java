@@ -56,5 +56,18 @@ public class Sample41Controller {
     return "sample43.html";
   }
 
-  
+  @GetMapping("step5")
+  public String sample45() {
+    return "sample45.html";
+  }
+
+  /*
+   * @PostMapping("step5")
+   * public String sample45(@RequestParam String chamberName, ModelMap model) {
+   * ArrayList<Chamber> chambers5 =
+   * chamberMapper.selectAllByChamberName(chamberName);
+   * model.addAttribute("chambers5", chambers5);
+   * return "sample45.html";
+   * }
+   */
 }
