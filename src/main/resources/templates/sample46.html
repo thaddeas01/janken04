@@ -20,7 +20,17 @@
       <td>身長:[[${chamberUser.height}]]</td>
     </tr>
   </div>
-  
+
+  <P>
+    あなたの身長と年齢を入力してください
+  <form th:action="@{/sample4/step8}" method="post">
+    <!-- stepで小数点以下何桁を入力させるか指定する-->
+    年齢<input type="number" name="age" />
+    身長<input type="number" step="0.1" name="height" />
+    <input type="submit" value="登録"><input type="reset" value="リセット">
+  </form>
+  </P>
+
   <a href="/logout">ログアウト</a>
 </body>
 
