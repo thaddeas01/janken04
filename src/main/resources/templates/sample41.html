@@ -9,6 +9,12 @@
 <body>
   <h1>Authorized! <span sec:authentication="name"></span>
   </h1>
+  <div><a href="/sample4/step2/1">小屋に最初に入室した人を1人表示する</a></div>
+
+  <div th:if="${chamber2}">
+    入室者:[[${chamber2.userName}]]
+    小屋名:[[${chamber2.chamberName}]]
+  </div>
   <a href="/logout">ログアウト</a>
 </body>
 
