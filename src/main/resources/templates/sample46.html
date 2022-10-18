@@ -9,6 +9,18 @@
 <body>
   <h1>Authorized! <span sec:authentication="name"></span>
   </h1>
+  <a href="/sample4/step7">身長と入室した小屋名が登録されているユーザ一覧</a>
+
+  <div th:each="chamberUser,stat:${chamberUsers7}">
+    <tr>
+      <td>Index:[[${stat.index}]]</td>
+      <td>ユーザ名:[[${chamberUser.userName}]]</td>
+      <td>小屋名:[[${chamberUser.chamberName}]]</td>
+      <td>年齢:[[${chamberUser.age}]]</td>
+      <td>身長:[[${chamberUser.height}]]</td>
+    </tr>
+  </div>
+  
   <a href="/logout">ログアウト</a>
 </body>
 
